@@ -23,13 +23,21 @@ namespace FunctionApp.MedicineFuncs
             var requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             var data = JsonConvert.DeserializeObject<MedicineModel>(requestBody);
 
-            var res = await new DocumentDbRepository<MedicineModel>("Medicine")
-                .UpsertAsync(data);
+            try
+            {
+                var res = await new DocumentDbRepository<MedicineModel>("Medicine")
+                        .UpsertAsync(data);
 
-            if (res.StatusCode == HttpStatusCode.OK)
-                return new OkResult();
+                if (res.StatusCode == HttpStatusCode.OK)
+                    return new OkResult();
+            }
+            catch (System.Exception)
+            {
+                return new InternalServerErrorResult();
+            }
 
-            return new InternalServerErrorResult();
+
+            return new BadRequestResult();
         }
     }
 }

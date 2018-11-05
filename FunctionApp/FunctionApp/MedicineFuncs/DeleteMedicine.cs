@@ -22,10 +22,17 @@ namespace FunctionApp.MedicineFuncs
             var res = await new DocumentDbRepository<MedicineModel>("Medicine")
                 .DeleteAsync(id);
 
-            if(res.StatusCode == HttpStatusCode.OK)
-                return new OkObjectResult(res);
+            try
+            {
+                if (res.StatusCode == HttpStatusCode.NoContent)
+                    return new OkObjectResult(res);
+            }
+            catch (System.Exception)
+            {
+                return new InternalServerErrorResult();
+            }
 
-            return new InternalServerErrorResult();
+            return new BadRequestResult();
         }
     }
 }
