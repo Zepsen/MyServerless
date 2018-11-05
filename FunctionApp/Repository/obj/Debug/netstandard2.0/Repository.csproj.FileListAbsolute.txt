@@ -1,0 +1,11 @@
+C:\Projects\_My\FunctionApp\Repository\bin\Debug\netstandard2.0\Repository.deps.json
+C:\Projects\_My\FunctionApp\Repository\bin\Debug\netstandard2.0\Repository.dll
+C:\Projects\_My\FunctionApp\Repository\obj\Debug\netstandard2.0\Repository.csproj.CoreCompileInputs.cache
+C:\Projects\_My\FunctionApp\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfoInputs.cache
+C:\Projects\_My\FunctionApp\Repository\obj\Debug\netstandard2.0\Repository.AssemblyInfo.cs
+C:\Projects\_My\FunctionApp\Repository\bin\Debug\netstandard2.0\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Projects\_My\FunctionApp\Repository\bin\Debug\netstandard2.0\DocumentDB.Spatial.Sql.dll
+C:\Projects\_My\FunctionApp\Repository\bin\Debug\netstandard2.0\Repository.pdb
+C:\Projects\_My\FunctionApp\Repository\obj\Debug\netstandard2.0\Repository.dll
+C:\Projects\_My\FunctionApp\Repository\obj\Debug\netstandard2.0\Repository.pdb
+C:\Projects\_My\FunctionApp\Repository\obj\Debug\netstandard2.0\Repository.csprojAssemblyReference.cache
