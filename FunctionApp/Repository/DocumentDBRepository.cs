@@ -48,6 +48,21 @@ namespace Repository
 
         }
 
+        public async Task<ResourceResponse<Document>> UpsertAsync(MedicineModel data)
+        {
+            return await _client.UpsertDocumentAsync(UriFactory.CreateDocumentCollectionUri(_databaseId, _collectionId), data);
+        }
+
+        public async Task<ResourceResponse<Document>> DeleteAsync(string id)
+        {
+            return await _client.DeleteDocumentAsync(UriFactory.CreateDocumentUri(_databaseId, _collectionId, id));
+        }
+
+        public async Task<ResourceResponse<Document>> CreateAsync(MedicineModel data)       
+        {
+            return await _client.CreateDocumentAsync(UriFactory.CreateDocumentCollectionUri(_databaseId, _collectionId), data);
+        }
+
         //private static async Task CreateDatabaseIfNotExistsAsync()
         //{
         //    try

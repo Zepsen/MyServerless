@@ -5449,11 +5449,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\_My\\FunctionApp\\Repository\\Repository.csproj",
+      "projectUniqueName": "C:\\Projects\\_My\\MyServerless\\FunctionApp\\Repository\\Repository.csproj",
       "projectName": "Repository",
-      "projectPath": "C:\\Projects\\_My\\FunctionApp\\Repository\\Repository.csproj",
+      "projectPath": "C:\\Projects\\_My\\MyServerless\\FunctionApp\\Repository\\Repository.csproj",
       "packagesPath": "C:\\Users\\ZepsenWork\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\_My\\FunctionApp\\Repository\\obj\\",
+      "outputPath": "C:\\Projects\\_My\\MyServerless\\FunctionApp\\Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
