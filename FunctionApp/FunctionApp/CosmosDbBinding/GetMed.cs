@@ -1,31 +1,26 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.Http;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using Repository.Models;
 
-namespace FunctionApp.MedicineCosmosDb
+namespace FunctionApp.CosmosDbBinding
 {
-    public static class GetMeds
+    public static class GetMed
     {
-        [FunctionName("GetMeds")]
+        [FunctionName("GetMed")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", Route = null)] HttpRequest req,
             [CosmosDB(
                 databaseName: "TestDb",
                 collectionName: "Medicine",
-                ConnectionStringSetting = "CosmosDBConnection")]
-                IEnumerable<MedicineModel> medicine,
+                ConnectionStringSetting = "CosmosDBConnection",
+                Id = "{Query.id}")]MedicineModel medicine,
             ILogger log)
         {
-            return new OkObjectResult(medicine.ToList());
+            return new OkObjectResult(medicine);
         }
     }
 }
